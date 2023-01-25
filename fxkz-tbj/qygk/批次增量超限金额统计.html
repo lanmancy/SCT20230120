@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = [
+      {
+        "金额范围（万元）": "0~1",
+        "批次数量": 30
+      },
+      {
+        "金额范围（万元）": "1~2",
+        "批次数量": 814
+      },
+      {
+        "金额范围（万元）": "2~3",
+        "批次数量": 622
+      },
+      {
+        "金额范围（万元）": "3~4",
+        "批次数量": 898
+      },
+      {
+        "金额范围（万元）": "4~5",
+        "批次数量": 674
+      },
+      {
+        "金额范围（万元）": "5~6",
+        "批次数量": 438
+      },
+      {
+        "金额范围（万元）": "6~7",
+        "批次数量": 180
+      }
+    ];
+    const config = {
+      "title": {
+        "visible": true,
+        "text": "批次增量超限金额统计"
+      },
+      "description": {
+        "text": "一个简单的柱状图"
+      },
+      "legend": {
+        "flipPage": false
+      },
+      "forceFit": false,
+      "width": 1116,
+      "height": 376,
+      "yField": "批次数量",
+      "xField": "金额范围（万元）",
+      "id": "column_chart",
+      "color": [
+        "#5B8FF9"
+      ]
+    }
+    const plot = new g2plot.Column(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>

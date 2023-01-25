@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = undefined;
+    const config = {
+      "title": {
+        "visible": true,
+        "text": "累积签约企业数量"
+      },
+      "description": {
+        "visible": true,
+        "text": "时间段内累积签约的企业数量（含历史基数）"
+      },
+      "legend": {
+        "flipPage": false
+      },
+      "forceFit": false,
+      "width": 300,
+      "height": 230,
+      "min": 0,
+      "max": 1000,
+      "value": 615
+    }
+    const plot = new g2plot.Liquid(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>

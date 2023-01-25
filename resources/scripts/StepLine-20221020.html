@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = [
+      {
+        "x": "2019-01",
+        "y": 607
+      },
+      {
+        "x": "2019-02",
+        "y": 945
+      },
+      {
+        "x": "2019-03",
+        "y": 347
+      },
+      {
+        "x": "2019-04",
+        "y": 831
+      },
+      {
+        "x": "2019-05",
+        "y": 820
+      },
+      {
+        "x": "2019-06",
+        "y": 620
+      }
+    ];
+    const config = {
+      "title": {
+        "visible": true,
+        "text": "阶梯图"
+      },
+      "description": {
+        "visible": true,
+        "text": "一个简单的阶梯图"
+      },
+      "legend": {
+        "flipPage": false
+      },
+      "forceFit": false,
+      "width": 580,
+      "height": 376,
+      "xField": "x",
+      "yField": "y",
+      "color": [
+        "#5B8FF9"
+      ]
+    }
+    const plot = new g2plot.StepLine(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>

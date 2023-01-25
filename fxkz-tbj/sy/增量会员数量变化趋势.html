@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = [
+      {
+        "新增会员数量": 92,
+        "null": "05-01"
+      },
+      {
+        "新增会员数量": 91,
+        "null": "05-02"
+      },
+      {
+        "新增会员数量": 91,
+        "null": "05-03"
+      },
+      {
+        "新增会员数量": 95,
+        "null": "05-04"
+      },
+      {
+        "新增会员数量": 90,
+        "null": "05-05"
+      },
+      {
+        "新增会员数量": 99,
+        "null": "05-06"
+      },
+      {
+        "新增会员数量": 100,
+        "null": "05-07"
+      },
+      {
+        "新增会员数量": 118,
+        "null": "05-08"
+      },
+      {
+        "新增会员数量": 121,
+        "null": "05-09"
+      },
+      {
+        "新增会员数量": 122,
+        "null": "05-10"
+      },
+      {
+        "新增会员数量": 145,
+        "null": "05-11"
+      },
+      {
+        "新增会员数量": 148,
+        "null": "05-12"
+      },
+      {
+        "新增会员数量": 136,
+        "null": "05-13"
+      },
+      {
+        "新增会员数量": 158,
+        "null": "05-14"
+      },
+      {
+        "新增会员数量": 164,
+        "null": "05-15"
+      },
+      {
+        "新增会员数量": 168,
+        "null": "05-16"
+      },
+      {
+        "新增会员数量": 154,
+        "null": "05-17"
+      },
+      {
+        "新增会员数量": 166,
+        "null": "05-18"
+      },
+      {
+        "新增会员数量": 184,
+        "null": "05-19"
+      },
+      {
+        "新增会员数量": 171,
+        "null": "05-20"
+      },
+      {
+        "新增会员数量": 176,
+        "null": "05-21"
+      },
+      {
+        "新增会员数量": 199,
+        "null": "05-22"
+      },
+      {
+        "新增会员数量": 188,
+        "null": "05-23"
+      },
+      {
+        "新增会员数量": 206,
+        "null": "05-24"
+      },
+      {
+        "新增会员数量": 204,
+        "null": "05-25"
+      },
+      {
+        "新增会员数量": 204,
+        "null": "05-26"
+      },
+      {
+        "新增会员数量": 204,
+        "null": "05-27"
+      },
+      {
+        "新增会员数量": 209,
+        "null": "05-28"
+      },
+      {
+        "新增会员数量": 215,
+        "null": "05-29"
+      },
+      {
+        "新增会员数量": 223,
+        "null": "05-30"
+      },
+      {
+        "新增会员数量": 220,
+        "null": "05-31"
+      }
+    ];
+    const config = {
+      "title": {
+        "visible": true,
+        "text": "增量会员数量变化趋势"
+      },
+      "description": {
+        "visible": true,
+        "text": "增量会员数量共计：4904"
+      },
+      "legend": {
+        "flipPage": false
+      },
+      "xAxis": {
+        "visible": false
+      },
+      "smooth": true,
+      "forceFit": false,
+      "width": 357,
+      "height": 376,
+      "xField": "null",
+      "yField": "新增会员数量",
+      "id": "line_chart",
+      "color": [
+        "#5B8FF9"
+      ]
+    }
+    const plot = new g2plot.Line(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>

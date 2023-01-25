@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = [
+      {
+        "天数": "0~1",
+        "批次数量": 31
+      },
+      {
+        "天数": "1~2",
+        "批次数量": 769
+      },
+      {
+        "天数": "2~3",
+        "批次数量": 522
+      },
+      {
+        "天数": "3~4",
+        "批次数量": 191
+      },
+      {
+        "天数": "4~5",
+        "批次数量": 273
+      }
+    ];
+    const config = {
+      "title": {
+        "visible": true,
+        "text": "批次增量预警时长统计"
+      },
+      "description": {
+        "text": "一个简单的饼图"
+      },
+      "legend": {
+        "position": "bottom-center",
+        "flipPage": false
+      },
+      "width": 546,
+      "height": 376,
+      "forceFit": false,
+      "colorField": "天数",
+      "angleField": "批次数量",
+      "id": "pie_chart",
+      "color": [
+        "#5B8FF9",
+        "#5AD8A6",
+        "#5D7092",
+        "#F6BD16",
+        "#E8684A"
+      ]
+    }
+    const plot = new g2plot.Pie(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>

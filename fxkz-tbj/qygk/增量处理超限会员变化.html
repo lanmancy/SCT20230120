@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = [
+      {
+        "null": "05-01",
+        "新增会员转换数量": 14
+      },
+      {
+        "null": "05-02",
+        "新增会员转换数量": 11
+      },
+      {
+        "null": "05-03",
+        "新增会员转换数量": 17
+      },
+      {
+        "null": "05-04",
+        "新增会员转换数量": 12
+      },
+      {
+        "null": "05-05",
+        "新增会员转换数量": 18
+      },
+      {
+        "null": "05-06",
+        "新增会员转换数量": 18
+      },
+      {
+        "null": "05-07",
+        "新增会员转换数量": 9
+      },
+      {
+        "null": "05-08",
+        "新增会员转换数量": 11
+      },
+      {
+        "null": "05-09",
+        "新增会员转换数量": 11
+      },
+      {
+        "null": "05-10",
+        "新增会员转换数量": 13
+      },
+      {
+        "null": "05-11",
+        "新增会员转换数量": 13
+      },
+      {
+        "null": "05-12",
+        "新增会员转换数量": 11
+      },
+      {
+        "null": "05-13",
+        "新增会员转换数量": 14
+      },
+      {
+        "null": "05-14",
+        "新增会员转换数量": 12
+      },
+      {
+        "null": "05-15",
+        "新增会员转换数量": 14
+      },
+      {
+        "null": "05-16",
+        "新增会员转换数量": 16
+      },
+      {
+        "null": "05-17",
+        "新增会员转换数量": 11
+      },
+      {
+        "null": "05-18",
+        "新增会员转换数量": 17
+      },
+      {
+        "null": "05-19",
+        "新增会员转换数量": 10
+      },
+      {
+        "null": "05-20",
+        "新增会员转换数量": 14
+      },
+      {
+        "null": "05-21",
+        "新增会员转换数量": 16
+      },
+      {
+        "null": "05-22",
+        "新增会员转换数量": 9
+      },
+      {
+        "null": "05-23",
+        "新增会员转换数量": 17
+      },
+      {
+        "null": "05-24",
+        "新增会员转换数量": 15
+      },
+      {
+        "null": "05-25",
+        "新增会员转换数量": 12
+      },
+      {
+        "null": "05-26",
+        "新增会员转换数量": 18
+      },
+      {
+        "null": "05-27",
+        "新增会员转换数量": 17
+      },
+      {
+        "null": "05-28",
+        "新增会员转换数量": 13
+      },
+      {
+        "null": "05-29",
+        "新增会员转换数量": 14
+      },
+      {
+        "null": "05-30",
+        "新增会员转换数量": 12
+      },
+      {
+        "null": "05-31",
+        "新增会员转换数量": 12
+      }
+    ];
+    const config = {
+      "title": {
+        "visible": true,
+        "text": "增量处理超限会员变化"
+      },
+      "description": {
+        "text": "一个简单的折线图"
+      },
+      "legend": {
+        "flipPage": false
+      },
+      "xAxis": {
+        "label": {
+          "visible": false
+        }
+      },
+      "smooth": true,
+      "forceFit": false,
+      "width": 357,
+      "height": 376,
+      "xField": "null",
+      "yField": "新增会员转换数量",
+      "id": "line_chart",
+      "color": [
+        "#5B8FF9"
+      ]
+    }
+    const plot = new g2plot.Line(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>

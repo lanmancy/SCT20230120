@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChartCube</title>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g2plot/0.11.3/dist/g2plot.js"></script>
+  </head>
+  <body>
+  <div id="app"></div>
+  <script>
+    const container = document.getElementById('app');
+    const data = [
+      {
+        "type": "门店一",
+        "x": "家具家电",
+        "y": 672
+      },
+      {
+        "type": "门店一",
+        "x": "粮油副食",
+        "y": 832
+      },
+      {
+        "type": "门店一",
+        "x": "美容洗护",
+        "y": 604
+      },
+      {
+        "type": "门店一",
+        "x": "母婴用品",
+        "y": 766
+      },
+      {
+        "type": "门店一",
+        "x": "进口食品",
+        "y": 863
+      },
+      {
+        "type": "门店一",
+        "x": "食品饮料",
+        "y": 956
+      },
+      {
+        "type": "门店一",
+        "x": "家庭清洁",
+        "y": 19
+      },
+      {
+        "type": "门店二",
+        "x": "家具家电",
+        "y": 30
+      },
+      {
+        "type": "门店二",
+        "x": "粮油副食",
+        "y": 935
+      },
+      {
+        "type": "门店二",
+        "x": "美容洗护",
+        "y": 37
+      },
+      {
+        "type": "门店二",
+        "x": "母婴用品",
+        "y": 388
+      },
+      {
+        "type": "门店二",
+        "x": "进口食品",
+        "y": 158
+      },
+      {
+        "type": "门店二",
+        "x": "食品饮料",
+        "y": 468
+      },
+      {
+        "type": "门店二",
+        "x": "家庭清洁",
+        "y": 110
+      }
+    ];
+    const config = {
+      "title": {
+        "visible": true,
+        "text": "堆叠柱状图"
+      },
+      "description": {
+        "visible": true,
+        "text": "一个简单的堆叠柱状图"
+      },
+      "legend": {
+        "flipPage": false
+      },
+      "xAxis": {
+        "title": {
+          "visible": false
+        }
+      },
+      "yAxis": {
+        "title": {
+          "visible": false
+        }
+      },
+      "forceFit": false,
+      "width": 560,
+      "height": 376,
+      "xField": "x",
+      "yField": "y",
+      "stackField": "type",
+      "color": [
+        "#5B8FF9",
+        "#5AD8A6"
+      ]
+    }
+    const plot = new g2plot.StackColumn(container, {
+      data,
+      ...config,
+    });
+    plot.render();
+  </script>
+  </body>
+</html>
